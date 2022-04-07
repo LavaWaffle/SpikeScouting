@@ -33,6 +33,8 @@ export default function Home() {
     setFavorite("miss close");
   };
 
+  const [secondLaunch, setSecondLaunch] = useState('got in')
+
   const handleMissFar = () => {
     setFavorite("miss far");
   };
@@ -43,7 +45,8 @@ export default function Home() {
       ...cMarkers,
       {
         ...markers[markers.length-1],
-        type: favorite
+        type1: favorite,
+        type2: secondLaunch,
       }
     ]
     console.log(cMarkers)
@@ -77,7 +80,7 @@ export default function Home() {
         setShowModal(false)
         markers.splice(-1)
       }}>
-        <h3>What type of shot was it?</h3>
+        <h3>What type of shot was it (1st shot)?</h3>
         <div className="space-x-3 mt-5 flex justify-around">
           <RadioButton
             label="Got In"
@@ -98,6 +101,35 @@ export default function Home() {
             label="Miss Far"
             value={favorite === "miss far"}
             onChange={handleMissFar}
+          />
+        </div>
+        <h3>What type of shot was it (2nd shot)?</h3>
+        <div className="space-x-3 mt-5 flex justify-around">
+          <RadioButton
+            label="Got In"
+            value={secondLaunch === "got in"}
+            onChange={() => setSecondLaunch("got in")}
+          />
+          <RadioButton
+            label="Bounce Out"
+            value={secondLaunch === "bounce out"}
+            onChange={() => setSecondLaunch("bounce out")}
+          />
+          <RadioButton
+            label="Miss Close"
+            value={secondLaunch === "miss close"}
+            onChange={() => setSecondLaunch("miss close")}
+          />
+          <RadioButton
+            label="Miss Far"
+            value={secondLaunch === "miss far"}
+            onChange={() => setSecondLaunch("miss far")}
+          />
+          <RadioButton
+            label="N/A"
+            value={secondLaunch === "na"}
+            Icon={() => <div className="bg-white w-24 aspect-square rounded-lg"></div>}
+            onChange={() => setSecondLaunch('na')}
           />
         </div>
         <div className="text-center">
