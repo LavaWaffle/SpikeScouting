@@ -15,7 +15,6 @@ export default function Home() {
         setShowModal(true);
       }, 50);
     }
-    console.log(markers)
   }, [markers]);
 
   const [showModal, setShowModal] = useState(false);
@@ -66,7 +65,7 @@ export default function Home() {
   const [totalRP, setTotalRP] = useState(0);
 
   const handleOverModel = () => {
-    addGame(1, markers, cMarkers, won, weWin, autoBalls, climbBar, climbRP, cargoRP, totalRP);
+    addGame(gameID, markers, cMarkers, won, weWin, autoBalls, climbBar, climbRP, cargoRP, totalRP);
     setGameOverModel(false)
 
   }
