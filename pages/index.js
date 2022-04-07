@@ -67,7 +67,8 @@ export default function Home() {
   const handleOverModel = () => {
     addGame(gameID, markers, cMarkers, won, weWin, autoBalls, climbBar, climbRP, cargoRP, totalRP);
     setGameOverModel(false)
-
+    setMarkers([])
+    cMarkers=[]
   }
 
   return (
