@@ -38,6 +38,7 @@ const addGame = (gameId, markers, cMarkers, won, wewin, autoBalls, climbBar, cli
     climbRP: climbRP,
     cargoRP: cargoRP,
     totalRP: totalRP,
+    flipped: true,
     createdAt: serverTimestamp()
   })
 }

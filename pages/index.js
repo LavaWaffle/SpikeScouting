@@ -142,7 +142,7 @@ export default function Home() {
         </div>
       </Modal>
       <ImageMarker
-        src="field.png"
+        src="fieldFlipped.png"
         markers={markers}
         onAddMarker={(marker) => setMarkers([...markers, marker])}
       />
